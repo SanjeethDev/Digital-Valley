@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_lavender">#A588C8</color>
+    <color name="theme_lavender_light">#E4D5FF</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="theme_red_light">#CD5047</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme_dark_purple">#282039</color>
+    <color name="theme_peach">#D98880</color>
+    <color name="theme_yellow">#F4D03F</color>
+    <color name="theme_yellow_light">#E4D86F</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="add">#D85757</color>
+    <color name="subtract">#79D857</color>
+</resources>

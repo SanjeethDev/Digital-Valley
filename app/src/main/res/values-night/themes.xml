@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="Theme.Bankapp" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/theme_dark_purple</item>
+        <item name="colorPrimaryVariant">@color/theme_peach</item>
+        <item name="colorOnPrimary">@color/theme_lavender</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme_yellow_light</item>
+        <item name="colorSecondaryVariant">@color/theme_red_light</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#F0E7FF</item>
+    </style>
+</resources>
