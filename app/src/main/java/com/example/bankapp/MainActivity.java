@@ -1,11 +1,13 @@
 package com.example.bankapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Essential_RecyclerViewAdapter ERVAdapter;
     RecentTranscation_RVAdapter RTRVAdapter;
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,19 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recentTranscationsView = findViewById(R.id.recent_transcations);
         setRecentTranscationData();
+        RTRVAdapter = new RecentTranscation_RVAdapter(this, recentTLog_array);
+        recentTranscationsView.setAdapter(RTRVAdapter);
+        recentTranscationsView.setLayoutManager(new LinearLayoutManager(this));
 
 
         hide_button = findViewById(R.id.hide_essentials);
-        hide_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(hide_button.isChecked()) {
-                    setEssentialModel();
-                    ERVAdapter.notifyDataSetChanged();
-                } else {
-                    hideEsstentialModel();
-                    ERVAdapter.notifyDataSetChanged();
-                }
+        hide_button.setOnClickListener(view -> {
+            if(hide_button.isChecked()) {
+                setEssentialModel();
+                ERVAdapter.notifyDataSetChanged();
+            } else {
+                hideEsstentialModel();
+                ERVAdapter.notifyDataSetChanged();
             }
         });
     }
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         String[] rtlog_type = getResources().getStringArray(R.array.recenttlog_type);
 
         for (int i=0; i<rtlog_names.length; i++) {
-            recentTLog_array.add(new RecentTransactionModel(rtlog_names[i], rtlog_date[i], rtlog_amount[i], rtlog_type[i]));
+            recentTLog_array.add(new RecentTransactionModel(rtlog_names[i], rtlog_date[i], " ₹ " + rtlog_amount[i], rtlog_type[i]));
         }
 
 
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         String[] essential_titles = getResources().getStringArray(R.array.essentialcard_names);
         esstential_array.clear();
         for (int i=0; i<essential_titles.length; i++) {
-            esstential_array.add(new EssentialModel(essential_images[i], essential_titles[i], essential_values[i]));
+            esstential_array.add(new EssentialModel(essential_images[i], essential_titles[i], " ₹ " + essential_values[i]));
         }
     }
 
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         String[] essential_titles = getResources().getStringArray(R.array.essentialcard_names);
         esstential_array.clear();
         for (int i=0; i<essential_titles.length; i++) {
-            esstential_array.add(new EssentialModel(essential_images[i], essential_titles[i], "XXXX"));
+            esstential_array.add(new EssentialModel(essential_images[i], essential_titles[i], " XXXX"));
         }
     }
 }

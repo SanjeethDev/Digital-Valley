@@ -30,13 +30,13 @@ public class RecentTranscation_RVAdapter extends RecyclerView.Adapter<RecentTran
 
     @Override
     public void onBindViewHolder(@NonNull RecentTranscation_RVAdapter.MyViewHolder holder, int position) {
-        if (ReTrModels.get(position).getTrancamount() == "+") {
+        if (ReTrModels.get(position).getTranctype().contains("+")) {
             holder.tlog_accnameT.setText(ReTrModels.get(position).getAccname());
             holder.tlog_datetimeT.setText(ReTrModels.get(position).getTrancdate());
             holder.tlog_amountT.setText(ReTrModels.get(position).getTrancamount());
             holder.tlog_amountT.setTextColor(Color.rgb(121,216,87));
             holder.tlog_typeT.setText(ReTrModels.get(position).getTranctype());
-            holder.tlog_amountT.setTextColor(Color.rgb(121,216,87));
+            holder.tlog_typeT.setTextColor(Color.rgb(121,216,87));
 
         } else {
             holder.tlog_accnameT.setText(ReTrModels.get(position).getAccname());
@@ -50,7 +50,7 @@ public class RecentTranscation_RVAdapter extends RecyclerView.Adapter<RecentTran
 
     @Override
     public int getItemCount() {
-        return 0;
+        return ReTrModels.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

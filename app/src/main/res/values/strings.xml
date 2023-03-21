@@ -2,6 +2,8 @@
     <string name="app_name">bankapp</string>
     <string name="placeholder_recycview.1">Item Name</string>
     <string name="placeholder_recycview.2">Item Value</string>
+    <string name="placeholder_recycview.3">#</string>
+    <string name="content_discription">This is filler for content discription warnings.</string>
     <string name="blank"> </string>
 
     <string-array name="essentialcard_names">
@@ -18,7 +20,7 @@
     
     <string-array name="recenttlog_names">
         <item>Amazon</item>
-        <item>Flipkart</item>
+        <item>Flipkart Returns</item>
         <item>Amazon Returns</item>
     </string-array>
 
@@ -36,7 +38,7 @@
 
     <string-array name="recenttlog_type">
         <item>-</item>
-        <item>-</item>
+        <item>+</item>
         <item>+</item>
     </string-array>
 </resources>
