@@ -1,13 +1,13 @@
-package com.example.bankapp;
+package com.dev.bankapp;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.widget.SearchView;
 import android.widget.ToggleButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {

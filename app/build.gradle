@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.bankapp'
+    namespace 'com.dev.bankapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.bankapp"
+        applicationId "com.dev.bankapp"
         minSdk 24
         targetSdk 33
         versionCode 1

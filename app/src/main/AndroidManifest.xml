@@ -12,7 +12,7 @@
     android:theme="@style/Theme.Bankapp"
     tools:targetApi="31">
     <activity
-        android:name=".Login"
+        android:name="com.dev.bankapp.Login"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
         </intent-filter>
     </activity>
     <activity
-        android:name=".MainActivity"
+        android:name="com.dev.bankapp.MainActivity"
         android:exported="true" />
 </application>
 

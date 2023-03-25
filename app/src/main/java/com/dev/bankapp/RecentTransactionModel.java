@@ -1,4 +1,4 @@
-package com.example.bankapp;
+package com.dev.bankapp;
 
 public class RecentTransactionModel {
     String accname;

@@ -1,4 +1,4 @@
-package com.example.bankapp;
+package com.dev.bankapp;
 
 public class EssentialModel {
     int item_image;

@@ -1,4 +1,4 @@
-package com.example.bankapp;
+package com.dev.bankapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
