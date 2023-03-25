@@ -5,6 +5,9 @@
     <string name="placeholder_recycview.3">#</string>
     <string name="content_discription">This is filler for content discription warnings.</string>
     <string name="blank"> </string>
+    <string name="login">Login</string>
+    <string name="enter_pincode">Enter pincode:</string>
+    <string name="or">or</string>
 
     <string-array name="essentialcard_names">
         <item>Deposits</item>
@@ -17,7 +20,7 @@
         <item>0.00</item>
         <item>6000.0</item>
     </string-array>
-    
+
     <string-array name="recenttlog_names">
         <item>Amazon</item>
         <item>Flipkart Returns</item>

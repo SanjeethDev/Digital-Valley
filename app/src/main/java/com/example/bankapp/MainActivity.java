@@ -2,8 +2,7 @@ package com.example.bankapp;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.widget.SearchView;
 import android.widget.ToggleButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -13,9 +12,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<EssentialModel> esstential_array = new ArrayList<>();
-    ArrayList<RecentTransactionModel> recentTLog_array = new ArrayList<>();
-    int[] essential_images = {R.drawable.ic_deposit, R.drawable.ic_loan, R.drawable.ic_savings};
+    final ArrayList<EssentialModel> esstential_array = new ArrayList<>();
+    final ArrayList<RecentTransactionModel> recentTLog_array = new ArrayList<>();
+    final int[] essential_images = {R.drawable.ic_deposit, R.drawable.ic_loan, R.drawable.ic_savings};
 
     ToggleButton hide_button;
     Essential_RecyclerViewAdapter ERVAdapter;
@@ -44,11 +43,10 @@ public class MainActivity extends AppCompatActivity {
         hide_button.setOnClickListener(view -> {
             if(hide_button.isChecked()) {
                 setEssentialModel();
-                ERVAdapter.notifyDataSetChanged();
             } else {
                 hideEsstentialModel();
-                ERVAdapter.notifyDataSetChanged();
             }
+            ERVAdapter.notifyDataSetChanged();
         });
     }
 
@@ -61,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i<rtlog_names.length; i++) {
             recentTLog_array.add(new RecentTransactionModel(rtlog_names[i], rtlog_date[i], " ₹ " + rtlog_amount[i], rtlog_type[i]));
         }
-
-
-
     }
 
     private void setEssentialModel() {
