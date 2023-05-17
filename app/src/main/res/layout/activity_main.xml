@@ -4,111 +4,240 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?colorPrimary"
-    tools:context="com.dev.bankapp.MainActivity">
+    android:background="?colorOnPrimary"
+    tools:context="com.dev.digitalvalley.MainActivity"
+    android:orientation="vertical">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_settings_button"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="@id/main_user_detail"
+        app:layout_constraintEnd_toStartOf="@+id/main_user_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_user_detail"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_user_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="?android:colorBackground"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+        app:contentPaddingBottom="10dp"
+        app:contentPaddingLeft="15dp"
+        app:contentPaddingRight="15dp"
+        app:contentPaddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rounded_gradient_1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/compass"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        <TextView
+            android:id="@+id/main_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:lines="1"
+            android:breakStrategy="simple"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_logout_button"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintStart_toEndOf="@id/main_user_detail"
+        app:layout_constraintTop_toTopOf="@id/main_user_detail"
+        app:layout_constraintBottom_toBottomOf="@id/main_user_detail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:background="@drawable/rounded_gradient_2"
-        android:contentDescription="@string/content_discription"/>
+        app:layout_constraintHorizontal_bias="0.9"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/estn_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/search_bar"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        android:layout_marginHorizontal="10dp"
+        app:cardBackgroundColor="?android:colorBackground"
         app:cardCornerRadius="10dp"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="?android:colorBackground">
-
+        app:contentPadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_user_detail">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp">
+            android:layout_height="wrap_content">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/estn_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
+            <TextView
+                android:id="@+id/main_current_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:text="@string/current_balance"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:drawableStartCompat="@drawable/ic_balance_wallet"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:reverseLayout="true">
+                app:layout_constraintVertical_bias="0.5" />
 
-            </androidx.recyclerview.widget.RecyclerView>
-
-            <ToggleButton
-                android:id="@+id/hide_essentials"
-                android:layout_width="30dp"
-                android:layout_height="20dp"
-                android:layout_below="@id/estn_recyclerview"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/toggle_selector"
-                android:textOff="@string/blank"
-                android:textOn="@string/blank"
+            <TextView
+                android:id="@+id/main_current_balance_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/estn_recyclerview"
-                app:layout_constraintRight_toRightOf="@id/estn_recyclerview"
-                app:layout_constraintTop_toBottomOf="@id/estn_recyclerview" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/main_current_balance"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/compass"
-        android:layout_below="@id/estn_card"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@id/estn_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="10dp"
+        app:cardBackgroundColor="?android:colorBackground"
         app:cardCornerRadius="10dp"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="?android:colorBackground">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recent_transcations"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp">
+        app:layout_constraintTop_toBottomOf="@+id/estn_card"
+        tools:layout_editor_absoluteX="20dp">
 
-        </androidx.recyclerview.widget.RecyclerView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_show_all_transactions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recent_transactions"
+                app:layout_constraintTop_toBottomOf="@id/recent_transactions"
+                app:layout_constraintStart_toStartOf="@id/recent_transactions"
+                app:layout_constraintEnd_toEndOf="@id/recent_transactions"
+                android:padding="10dp"
+                android:text="@string/show_all_transactions"
+                android:textAlignment="center" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:tint="?android:colorBackground" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="?android:colorBackground"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:columnCount="4">
+
+            <LinearLayout
+                android:id="@+id/main_function_send_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:breakStrategy="simple"
+                    android:text="@string/pay_phone_number"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    app:drawableTopCompat="@drawable/ic_phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_function_scan_qr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:breakStrategy="simple"
+                    android:text="@string/scan_qr_code"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    app:drawableTopCompat="@drawable/ic_qrscanner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_function_pay_contacts"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:breakStrategy="simple"
+                    android:text="@string/pay_contacts"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    app:drawableTopCompat="@drawable/ic_contacts" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_function_idsandcards"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:breakStrategy="simple"
+                    android:text="@string/ids_cards"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    app:drawableTopCompat="@drawable/ic_card" />
+            </LinearLayout>
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

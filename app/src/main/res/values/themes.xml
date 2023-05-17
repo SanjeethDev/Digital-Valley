@@ -2,18 +2,19 @@
     <!-- Base application theme. -->
     <style name="Theme.Bankapp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/theme_lavender_light</item>
-        <item name="colorPrimaryVariant">@color/theme_peach</item>
-        <item name="colorOnPrimary">@color/theme_dark_purple</item>
+        <item name="colorPrimary">@color/theme_dark_purple</item>
+        <item name="colorPrimaryVariant">#FF8A80</item>
+        <item name="colorOnPrimary">@color/theme_lavender_light</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/theme_lavender</item>
+        <item name="colorSecondary">@color/theme_yellow</item>
         <item name="colorSecondaryVariant">@color/theme_teal</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?colorPrimary</item>
+        <item name="android:statusBarColor">?colorOnPrimary</item>
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/theme_dark_purple</item>
         <item name="pinViewStyle">@style/PinWidget.PinView</item>
     </style>
+
 </resources>

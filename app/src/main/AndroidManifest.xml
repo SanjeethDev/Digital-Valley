@@ -2,27 +2,70 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<application
-    android:allowBackup="true"
-    android:dataExtractionRules="@xml/data_extraction_rules"
-    android:fullBackupContent="@xml/backup_rules"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:supportsRtl="true"
-    android:theme="@style/Theme.Bankapp"
-    tools:targetApi="31">
-    <activity
-        android:name="com.dev.bankapp.Login"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity
-        android:name="com.dev.bankapp.MainActivity"
-        android:exported="true" />
-</application>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bankapp"
+        tools:targetApi="31">
+        <activity
+            android:name="com.dev.digitalvalley.VaultUploadDialog"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.IDsAndCards"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.PayContacts"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.AccountInfo"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.TransactionPin"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.SetAmount"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.AllTransactions"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.ScanQR"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.PayByPhone"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.VerifyAccountWithKey"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.SetPinCodes"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.Register"
+            android:exported="false" />
+        <activity
+            android:name="com.dev.digitalvalley.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dev.digitalvalley.MainActivity"
+            android:exported="true" />
+    </application>
 </manifest>

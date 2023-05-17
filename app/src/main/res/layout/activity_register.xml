@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dev.digitalvalley.Login"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:background="?colorOnPrimary"
+    android:paddingTop="35dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setup"
+        android:textSize="24sp"
+        android:layout_marginStart="25dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="16sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_details"
+        android:textSize="14sp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="25dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp">
+
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/example_gmail_com"
+            android:background="@drawable/cs_edittext"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="5dp"/>
+
+        <TextView
+            android:id="@+id/register_error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/register_email"
+            app:layout_constraintEnd_toEndOf="@id/register_email"
+            app:layout_constraintTop_toBottomOf="@id/register_email"
+            app:layout_constraintHorizontal_bias="0.05"
+            android:text=""
+            android:textColor="#D80832" />
+
+        <ProgressBar
+            android:id="@+id/register_progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/register_confirm_button"
+            app:layout_constraintBottom_toBottomOf="@id/register_confirm_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/register_confirm_button"
+            app:layout_constraintHorizontal_bias="0.95"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/register_confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_error_msg"
+            app:layout_constraintHorizontal_bias="0.95"
+            android:text="@string/next"
+            android:enabled="false"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_foreground"
+        app:tint="?android:colorBackground" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,47 +1,50 @@
 <resources>
-    <string name="app_name">bankapp</string>
-    <string name="placeholder_recycview.1">Item Name</string>
-    <string name="placeholder_recycview.2">Item Value</string>
+    <string name="app_name">Digital Valley</string>
     <string name="placeholder_recycview.3">#</string>
-    <string name="content_discription">This is filler for content discription warnings.</string>
+    <string name="content_description">This is filler for content discription warnings.</string>
     <string name="blank"> </string>
     <string name="login">Login</string>
     <string name="enter_pincode">Enter pincode:</string>
     <string name="or">or</string>
-
-    <string-array name="essentialcard_names">
-        <item>Deposits</item>
-        <item>Borrowings</item>
-        <item>Savings</item>
-    </string-array>
-
-    <string-array name="essentialcard_values">
-        <item>6000.0</item>
-        <item>0.00</item>
-        <item>6000.0</item>
-    </string-array>
-
-    <string-array name="recenttlog_names">
-        <item>Amazon</item>
-        <item>Flipkart Returns</item>
-        <item>Amazon Returns</item>
-    </string-array>
-
-    <string-array name="recenttlog_date">
-        <item>March 05, 2023 at 9:00 am</item>
-        <item>April 04, 2023 at 10:00 pm</item>
-        <item>May 15, 2023 at 5:23 pm</item>
-    </string-array>
-
-    <string-array name="recenttlog_amount">
-        <item>5499</item>
-        <item>1199</item>
-        <item>1024</item>
-    </string-array>
-
-    <string-array name="recenttlog_type">
-        <item>-</item>
-        <item>+</item>
-        <item>+</item>
-    </string-array>
+    <string name="setup">Setup</string>
+    <string name="register_details">Fill in the below details to get started. (Enter email connected to your account)</string>
+    <string name="next">next</string>
+    <string name="welcome">Welcome!</string>
+    <string name="new_here">New here?</string>
+    <string name="pincode_setup_details">Set your 4-digit Login and Transaction PIN codes.</string>
+    <string name="enter_login_pin">Enter login PIN:</string>
+    <string name="confirm_login_pin">Confirm login PIN:</string>
+    <string name="confirm_transaction_pin">Confirm Transaction PIN:</string>
+    <string name="done">DONE</string>
+    <string name="enter_transaction_pin">Enter Transaction PIN:</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="email_not_linked">The entered email is not linked with an account.</string>
+    <string name="enter_the_sign_in_key_given_to_you">Enter the sign in key given to you:</string>
+    <string name="looks_like_you_are_new_here">Looks like you are new here!</string>
+    <string name="xxxxx_xxxxx">XXXXX XXXXXX</string>
+    <string name="wrong_key">Wrong key</string>
+    <string name="use_fingerprint">Use Fingerprint</string>
+    <string name="confirm_your_payment">Confirm your payment</string>
+    <string name="incorrect_pin">Incorrect Pin</string>
+    <string name="enter_payee_phone_number">Enter payee phone number</string>
+    <string name="_00000_00000">00000 00000</string>
+    <string name="signout">Signout</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="joined">Joined</string>
+    <string name="transactions">Transactions</string>
+    <string name="show_all_transactions">Show all transactions</string>
+    <string name="pay_phone_number">Pay phone\nnumber</string>
+    <string name="scan_qr_code">Scan QR\ncode</string>
+    <string name="pay_contacts">Pay\ncontacts</string>
+    <string name="no_contacts_found">No contacts found</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="ids_cards"><![CDATA[IDs &\n Cards]]></string>
+    <string name="document_vault">Document Vault</string>
+    <string name="upload">Upload</string>
+    <string name="select_document_photo">Select Document Photo</string>
+    <string name="driver_s_license">Driver\'s License</string>
+    <string name="document_or_card_name">Document or Card Name</string>
+    <string name="image_not_selected">Image not selected!</string>
+    <string name="upload_in_progress">Upload in progress!</string>
 </resources>

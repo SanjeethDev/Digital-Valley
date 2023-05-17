@@ -3,31 +3,9 @@
     <color name="theme_lavender">#A588C8</color>
     <color name="theme_lavender_light">#F7F2FF</color>
     <color name="theme_teal">#80D8FF</color>
+    <color name="theme_yellow">#FFFFE57F</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="theme_dark_purple">#282039</color>
-    <color name="theme_peach">#D98880</color>
     <color name="transparent">#00FFFFFF</color>
-    <color name="add">#D85757</color>
-    <color name="subtract">#79D857</color>
-    <color name="theme_pink">#fd5392</color>
-    <color name="theme_dark_peach">#f86f64</color>
-    <color name="theme_blue1_g1">#84f5de</color>
-    <color name="theme_blue1_g2">#56e8f2</color>
-    <color name="theme_blue1_g3">#84f5de</color>
-    <color name="theme_blue2_g1">#aafae0</color>
-    <color name="theme_blue2_g2">#59f2cc</color>
-    <color name="theme_blue2_g3">#4ab2ec</color>
-    <color name="theme_yellow_g1">#fad126</color>
-    <color name="theme_red_g2">#ff544f</color>
-
-
-
-
-
-
-
-
-
-
+    <color name="white">#FFFFFF</color>
 </resources>

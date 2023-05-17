@@ -1,108 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dev.bankapp.Login"
+    android:background="?colorOnPrimary"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="?colorPrimary">
+    tools:context="com.dev.digitalvalley.Login">
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/transaction_logo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/ic_launcher_foreground"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0"
+      app:tint="?android:textColor" />
 
   <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/appCompatTextView3"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/login"
-      android:textSize="24sp" />
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/transaction_logo"
+      app:layout_constraintVertical_bias="0" />
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/label_pincode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/enter_pincode"
-        android:textSize="16sp"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"/>
-
-    <com.chaos.view.PinView
-        android:id="@+id/pin_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/label_pincode"
-        app:layout_constraintEnd_toEndOf="@id/label_pincode"
-        app:layout_constraintTop_toBottomOf="@id/label_pincode"
-        android:inputType="numberPassword"
-        android:digits="0123456789"
-        app:itemCount="4"
-        app:itemRadius="12dp"
-        android:itemBackground="?android:colorBackground"
-        app:cursorColor="?colorSecondary"
-        app:cursorWidth="3dp"
-        app:lineWidth="1dp"
-        app:lineColor="?colorOnPrimary"
-        app:hideLineWhenFilled="true"
-        style="@style/PinWidget.PinView"/>
-
-<!--    <EditText-->
-<!--        android:id="@+id/pinedittext_1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/label_pincode"-->
-<!--        android:background="@drawable/pincodebox_selector"-->
-<!--        android:maxLength="1"-->
-<!--        android:paddingHorizontal="20dp"-->
-<!--        android:paddingVertical="10dp"/>-->
-<!--    <EditText-->
-<!--        android:id="@+id/pinedittext_2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toEndOf="@id/pinedittext_1"-->
-<!--        app:layout_constraintTop_toTopOf="@id/pinedittext_1"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:background="@drawable/pincodebox_selector"-->
-<!--        android:maxLength="1"-->
-<!--        android:paddingHorizontal="20dp"-->
-<!--        android:paddingVertical="10dp"/>-->
-<!--    <EditText-->
-<!--        android:id="@+id/pinedittext_3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toEndOf="@id/pinedittext_2"-->
-<!--        app:layout_constraintTop_toTopOf="@id/pinedittext_2"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:background="@drawable/pincodebox_selector"-->
-<!--        android:maxLength="1"-->
-<!--        android:paddingHorizontal="20dp"-->
-<!--        android:paddingVertical="10dp"/>-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/pinedittext_4"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toEndOf="@id/pinedittext_3"-->
-<!--        app:layout_constraintTop_toTopOf="@id/pinedittext_3"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:background="@drawable/pincodebox_selector"-->
-<!--        android:maxLength="1"-->
-<!--        android:paddingHorizontal="20dp"-->
-<!--        android:paddingVertical="10dp" />-->
-
-  </androidx.constraintlayout.widget.ConstraintLayout>
-
-  <androidx.appcompat.widget.AppCompatTextView
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardView3"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:text="@string/or"
-      android:textSize="18sp" />
+      app:cardBackgroundColor="@color/transparent"
+      app:cardCornerRadius="10dp"
+      app:cardElevation="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/appCompatTextView3"
+      app:layout_constraintVertical_bias="0.25">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/transaction_label_pincode"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="10dp"
+          android:paddingBottom="5dp"
+          android:text="@string/enter_pincode"
+          android:textSize="16sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <com.chaos.view.PinView
+          android:id="@+id/transaction_pin_input"
+          style="@style/PinWidget.PinView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:digits="0123456789"
+          android:hint="@string/content_description"
+          android:inputType="numberPassword"
+          android:itemBackground="?android:colorBackground"
+          app:cursorColor="?colorSecondaryVariant"
+          app:cursorWidth="3dp"
+          app:hideLineWhenFilled="true"
+          app:itemCount="4"
+          app:itemRadius="12dp"
+          app:layout_constraintEnd_toEndOf="@id/transaction_label_pincode"
+          app:layout_constraintStart_toStartOf="@id/transaction_label_pincode"
+          app:layout_constraintTop_toBottomOf="@id/transaction_label_pincode"
+          app:lineColor="?colorPrimary"
+          app:lineWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/login_error_msg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#D80832"
+      app:layout_constraintBottom_toTopOf="@+id/appCompatTextView2"
+      app:layout_constraintEnd_toEndOf="@+id/cardView3"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="@+id/cardView3"
+      app:layout_constraintTop_toBottomOf="@id/cardView3"
+      app:layout_constraintVertical_bias="0.4" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/appCompatTextView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/or"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cardView3"
+      app:layout_constraintVertical_bias="0.25" />
+
+  <Button
+      android:id="@+id/login_usefingerprint_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="60dp"
+      android:minHeight="58dp"
+      android:text="@string/use_fingerprint"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/appCompatTextView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

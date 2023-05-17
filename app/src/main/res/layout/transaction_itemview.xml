@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="?android:colorBackground"
+    android:layout_marginTop="5dp"
+    android:layout_marginHorizontal="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/itemview_transaction_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/itemview_transaction_type"
+            android:layout_alignParentStart="true"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/itemview_transaction_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/itemview_transaction_amount"
+            android:layout_marginEnd="5dp"
+            android:text="@string/placeholder_recycview.3" />
+
+        <TextView
+            android:id="@+id/itemview_transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Amount" />
+
+        <TextView
+            android:id="@+id/itemview_transaction_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@id/itemview_transaction_datetime"
+            android:layout_toEndOf="@id/itemview_transaction_amount"
+            android:layout_below="@id/itemview_transaction_datetime"
+            android:text="Account Name"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/itemview_transaction_account"
+            android:src="@drawable/rounded_line"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
