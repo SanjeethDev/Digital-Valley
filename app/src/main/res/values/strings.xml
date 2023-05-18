@@ -47,4 +47,7 @@
     <string name="document_or_card_name">Document or Card Name</string>
     <string name="image_not_selected">Image not selected!</string>
     <string name="upload_in_progress">Upload in progress!</string>
+    <string name="title_activity_vault_document_full_view">VaultDocumentFullView</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

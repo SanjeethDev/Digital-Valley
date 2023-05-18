@@ -77,6 +77,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="10dp"
         app:contentPadding="10dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +97,7 @@
         app:cardBackgroundColor="?android:colorBackground"
         app:cardCornerRadius="10dp"
         app:contentPadding="10dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

@@ -10,7 +10,7 @@ public class UploadVaultDocument {
 
     public UploadVaultDocument(String imageName, String imageUrl) {
         if (imageName.trim().equals("")) {
-            imageName = "No Name";
+            imageName = "Untitled";
         }
         this.imageName = imageName;
         this.imageUrl = imageUrl;

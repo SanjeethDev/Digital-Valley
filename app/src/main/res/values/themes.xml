@@ -16,5 +16,14 @@
         <item name="android:textColor">@color/theme_dark_purple</item>
         <item name="pinViewStyle">@style/PinWidget.PinView</item>
     </style>
+    <style name="Theme.Bankapp.Fullscreen" parent="Theme.Bankapp">
+        <item name="android:actionBarStyle">@style/Widget.Theme.Bankapp.ActionBar.Fullscreen</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
 
+    <style name="ThemeOverlay.DigitalValley.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
 </resources>
