@@ -1,8 +1,11 @@
 package com.dev.digitalvalley;
 
+import com.google.firebase.database.Exclude;
+
 public class UploadVaultDocument {
     private String imageName;
     private String imageUrl;
+    private String imageKey;
 
     public UploadVaultDocument() {
         //empty constructor
@@ -30,5 +33,15 @@ public class UploadVaultDocument {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    @Exclude
+    public String getImageKey() {
+        return imageKey;
+    }
+
+    @Exclude
+    public void setImageKey(String imageKey) {
+        this.imageKey = imageKey;
     }
 }

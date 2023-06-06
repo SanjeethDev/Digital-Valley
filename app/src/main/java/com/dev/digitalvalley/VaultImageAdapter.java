@@ -17,6 +17,7 @@ import java.util.List;
 public class VaultImageAdapter extends RecyclerView.Adapter<VaultImageAdapter.ImageViewHolder> {
     private Context mContext;
     private List<UploadVaultDocument> mUploads;
+    private OnItemClickListener mListener;
 
     public VaultImageAdapter(Context vaultContext, List<UploadVaultDocument> vaultUploads) {
         mContext = vaultContext;
@@ -43,7 +44,7 @@ public class VaultImageAdapter extends RecyclerView.Adapter<VaultImageAdapter.Im
         return mUploads.size();
     }
 
-    public class ImageViewHolder extends RecyclerView.ViewHolder {
+    public class ImageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView textViewName;
         public ImageView imageView;
 
@@ -52,6 +53,26 @@ public class VaultImageAdapter extends RecyclerView.Adapter<VaultImageAdapter.Im
             super(itemView);
             textViewName = itemView.findViewById(R.id.vault_image_name);
             imageView = itemView.findViewById(R.id.vault_image_preview);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (mListener != null) {
+                int position = getBindingAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    mListener.onItemClick(position);
+                }
+            }
         }
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
 }
