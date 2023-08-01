@@ -11,5 +11,6 @@ Main Features:
    Additional Features:
     1. Cloud Image Storage: to store important documents
 
-![Picture1](https://github.com/SanjeethDev/Digital-Valley/assets/91370632/48af014e-d965-45ef-aa36-44613d8a0362)
+![Picture1](https://github.com/SanjeethDev/Digital-Valley/assets/91370632/d2b6340c-e0f4-4c46-95b0-f3777937ee3f)
+
 
