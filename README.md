@@ -21,12 +21,14 @@ git clone git@github.com:SanjeethDev/Digital-Valley.git
 ```
 - Android Gradle Plugin Version: 8.0.2
 - Gradle Version: 8.0
-- Compile SDK Version: 34
+- Compile/Target SDK Version: 33
  
 - Min SDK Version: 24
     
 ## Permissions
-This application requires no permissions.
+- Camera
+- Read Contacts
+- Read Phone State
 
 ## Screenshots
 
