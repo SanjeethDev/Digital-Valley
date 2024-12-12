@@ -3,8 +3,9 @@
 An Android Digital Wallet application written in Java (Native app).
 
 ---
-<img src="https://github.com/user-attachments/assets/f96ceedc-2552-40e8-8e21-e966d6055961" align="left"
+<img src="https://github.com/user-attachments/assets/61cbb33a-e4f3-46e2-a70e-559d82678897" align="left"
 width="200" hspace="10" vspace="10">
+
 ### Features
 - User Info: user related information is displayed.
 - Current Balance: current amount balance of the logged in account.
